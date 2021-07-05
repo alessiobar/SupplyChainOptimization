@@ -123,7 +123,7 @@ grid_rf = {'n_estimators': [200,1000],
 
 #GridSearch and Model Fit
 something_rf = GridSearchCV(rf, param_grid=grid_rf, cv=5, verbose=2)
-something_rf.fit(df.drop(X_train, y_train) 
+something_rf.fit(X_train, y_train) 
 something_rf.best_params_
 predictions = something.predict(X_test)
 errors = abs(predictions - y_test)
